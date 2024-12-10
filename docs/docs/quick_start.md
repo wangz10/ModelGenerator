@@ -1,66 +1,16 @@
-# ModelGenerator
-
-ModelGenerator is an opinionated plug-and-play research framework for cross-disciplinary teams in ML & Bio.
-
-ModelGenerator is designed to enable rapid and reproducible prototyping with four kinds of experiments in mind:
-
-1. Applying pre-trained foundation models to new data
-2. Developing new finetuning and inference tasks for foundation models
-3. Benchmarking foundation models and creating leaderboards
-4. Testing new architectures for finetuning performance
-
-while also scaling with hardware and integrating with larger data pipelines or research workflows.
-
-ModelGenerator is built on PyTorch, HuggingFace, and Lightning, and works seamlessly with these ecosystems.
-
-## Who uses ModelGenerator?
-
-### 🧬 Biologists 
-* Intuitive one-command CLIs for in silico experiments
-* Pre-trained model zoo
-* Broad data compatibility
-* Pipeline-oriented workflows
-
-### 🤖 ML Researchers 
-* Reproducible-by-design experiments
-* Architecture A/B testing
-* Automatic hardware scaling
-* Integration with PyTorch, Lightning, HuggingFace, and WandB
-
-### ☕ Software Engineers
-* Extensible and modular models, tasks, and data
-* Strict typing and documentation
-* Fail-fast interface design
-* Continuous integration and testing
-
-### 🤝 Everyone benefits from
-* A collaborative hub and focal point for multidisciplinary work on experiments, models, software, and data
-* Community-driven development
-* Permissive license for academic and non-commercial use
-
-## Projects using ModelGenerator
-
-- [Accurate and General DNA Representations Emerge from Genome Foundation Models at Scale](https://doi.org/10.1101/2024.12.01.625444)
-- [A Large-Scale Foundation Model for RNA Function and Structure Prediction](https://doi.org/10.1101/2024.11.28.625345)
-- [Mixture of Experts Enable Efficient and Effective Protein Understanding and Design](https://doi.org/10.1101/2024.11.29.625425)
-- [Scaling Dense Representations for Single Cell with Transcriptome-Scale Context](https://doi.org/10.1101/2024.11.28.625303)
-- [Balancing Locality and Reconstruction in Protein Structure Tokenizer](https://doi.org/10.1101/2024.12.02.626366)
-
 # Quick Start
 
 ## Installation
 ```
-pip install modelgenerator
-```
-Good for running inference, reproducing published experiments, or finetuning on new data
-
-## Developer Installation
-```
-git clone https://github.com/genbio-ai/ModelGenerator
-cd modelgenerator
+git clone git@gitlab.genbio.ai:development/modelgenerator/ModelGenerator.git
+cd ModelGenerator
 pip install -e .
 ```
-Necessary to add new backbones, finetuning tasks, or data transformations
+Source installation is necessary to add new backbones, finetuning tasks, and data transformations, as well as use convenience configs and scripts.
+If you only need to run inference, reproduce published experiments, or finetune on new data, you can use
+```
+pip install modelgenerator
+```
 
 ## Quick Start
 ### Get embeddings from a pre-trained model
@@ -79,7 +29,7 @@ mgen predict --model Inference --model.backbone aido_dna_dummy \
   --config configs/examples/save_predictions.yaml
 ```
 
-### Finetune a pre-trained model
+### Finetune a model
 ```
 mgen fit --model ConditionalDiffusion --model.backbone aido_dna_dummy \
   --data ConditionalDiffusionDataModule --data.path "genbio-ai/100m-random-promoters"
@@ -101,7 +51,7 @@ mgen predict --model ConditionalDiffusion --model.backbone aido_dna_dummy \
 ```
 
 ## Configify your experiment
-The command
+This command
 ```
 mgen fit --model ConditionalDiffusion --model.backbone aido_dna_dummy \
   --data ConditionalDiffusionDataModule --data.path "genbio-ai/100m-random-promoters"
@@ -130,8 +80,9 @@ mgen fit --model SequenceRegression --data PromoterExpressionRegression \
   --config configs/examples/wandb.yaml
 ```
 
+We provide some useful examples in `configs/examples`.
 Configs use the LAST value for each attribute.
-Check the full configuration in `logs/lightning_logs/your-experiment/config.yaml`, or if using wandb `logs/config.yaml`.
+Check the full configuration logged with each experiment in `logs/lightning_logs/your-experiment/config.yaml`, or if using wandb `logs/config.yaml`.
 
 ## Use LoRA for parameter-efficient finetuning
 This also avoids saving the full model, only the LoRA weights are saved.
@@ -161,8 +112,8 @@ mgen fit --model SequenceClassification --model.strict_loading false \
 ```
 Make sure to turn off `strict_loading` to replace the adapter!
 
-## Use the head/adapter that comes with the backbone
+## Use the head/adapter/decoder that comes with the backbone
 ```
 mgen fit --model SequenceClassification --data GUEClassification \
---model.use_legacy_adapter true
+  --model.use_legacy_adapter true
 ```
