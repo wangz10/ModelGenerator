@@ -13,6 +13,8 @@ while also scaling with hardware and integrating with larger data pipelines or r
 
 ModelGenerator is built on PyTorch, HuggingFace, and Lightning, and works seamlessly with these ecosystems.
 
+See the [ModelGenerator documentation](https://genbio-ai.github.io/ModelGenerator) for installation, usage, tutorials, and API reference.
+
 ## Who uses ModelGenerator?
 
 ### 🧬 Biologists 
