@@ -1,12 +1,12 @@
 # Saving Outputs
 
-ModelGenerator provides a unified and hardware-adaptive interface for inference, embedding, and prediction with pre-trained models.
+AIDO.ModelGenerator provides a unified and hardware-adaptive interface for inference, embedding, and prediction with pre-trained models.
 
-This page covers how to use ModelGenerator to get embeddings and predictions from pre-trained backbones as well as finetuned models, and how to save and manage outputs for downstream analysis.
+This page covers how to use AIDO.ModelGenerator to get embeddings and predictions from pre-trained backbones as well as finetuned models, and how to save and manage outputs for downstream analysis.
 
 ## Pre-trained Backbones
 
-Backbones in ModelGenerator are pre-trained foundation models.
+Backbones in AIDO.ModelGenerator are pre-trained foundation models.
 
 A full list of available backbones is in the [Backbone API reference](../api_reference/backbones.md).
 For each data modality, we suggest using
@@ -78,7 +78,7 @@ trainer:
 
 ## Finetuned Models
 
-Finetuned model weights and configs from studies using ModelGenerator are available for download on [Hugging Face](https://huggingface.co/genbio-ai).
+Finetuned model weights and configs from studies using AIDO.ModelGenerator are available for download on [Hugging Face](https://huggingface.co/genbio-ai).
 
 To get predictions from a finetuned model, use `mgen predict` with the model's config file and checkpoint.
 ```
@@ -95,7 +95,7 @@ See [Data Experiment Design](../experiment_design/data.md) for more details.
 
 Models and datasets are often too large to fit in memory on a single device.
 
-ModelGenerator supports distributed training and inference on multiple devices by sharding models and data with [FSDP](https://lightning.ai/docs/pytorch/stable/advanced/model_parallel/fsdp.html).
+AIDO.ModelGenerator supports distributed training and inference on multiple devices by sharding models and data with [FSDP](https://lightning.ai/docs/pytorch/stable/advanced/model_parallel/fsdp.html).
 For example, to split `aido_protein_16b` across multiple nodes and multiple GPUs, add the following to your config:
 ```
 trainer:

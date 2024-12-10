@@ -1,6 +1,6 @@
 # Sequence Classification Task
 We apply the [AIDO.DNA-7B](https://huggingface.co/genbio-ai/AIDO.DNA-7B) models to sequence classification and property prediction tasks, using standard classification benchmarks from prominent works on DNA encoders covering a breadth of genomic functions related to transcriptional regulation and transcript processing.
-ModelGenerator implements two related benchmarks: Genome Understanding Evaluation proposed by [DNABERT-2](https://arxiv.org/abs/2306.15006) and Nucleotide Transformer Benchmark proposed by [Nucleotide Transformer](https://www.biorxiv.org/content/10.1101/2023.01.11.523679v1)
+AIDO.ModelGenerator implements two related benchmarks: Genome Understanding Evaluation proposed by [DNABERT-2](https://arxiv.org/abs/2306.15006) and Nucleotide Transformer Benchmark proposed by [Nucleotide Transformer](https://www.biorxiv.org/content/10.1101/2023.01.11.523679v1)
 
 We use LoRA finetuning with a CLS or MeanPool Adapter to finetune our model on these two benchmarks.
 

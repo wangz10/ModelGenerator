@@ -1,10 +1,10 @@
-site_name: ModelGenerator
-site_url: https://genbio.ai
+site_name: AIDO.ModelGenerator
+site_url: https://genbio-ai.github.io/ModelGenerator/
 site_author: GenBio AI
-site_description: ModelGenerator is an opinionated plug-and-play research framework for cross-disciplinary teams in ML & Bio.
-copyright: All rights reserved &copy; 2024-Present, GenBio.AI
+site_description: AIDO.ModelGenerator is an opinionated plug-and-play research framework for cross-disciplinary teams in ML & Bio.
+copyright: All rights reserved &copy; 2024-Present, GenBio AI
 
-repo_name: ModelGenerator
+repo_name: AIDO.ModelGenerator
 repo_url: https://github.com/genbio-ai/ModelGenerator
 
 nav:

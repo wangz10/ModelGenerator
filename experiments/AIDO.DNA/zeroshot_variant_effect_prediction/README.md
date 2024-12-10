@@ -1,7 +1,7 @@
 # Zeroshot Variant Effect Prediction
 
 Zeroshot variant effect prediction refers to the task of predicting the functional impact of genetic variants, especially single nucleotide polymorphisms (SNPs), without requiring additional task-specific fine-tuning of the model.
-ModelGenerator implements the procedure proposed by [Nucleotide Transformer](https://www.biorxiv.org/content/10.1101/2023.01.11.523679v1)
+AIDO.ModelGenerator implements the procedure proposed by [Nucleotide Transformer](https://www.biorxiv.org/content/10.1101/2023.01.11.523679v1)
 We use this to predict the effects of single nucleotide polymorphisms (SNPs) in the [AIDO.DNA-300M](https://huggingface.co/genbio-ai/AIDO.DNA-300M) model.
 This task uses the pre-trained models directly, and does not require finetuning.
 

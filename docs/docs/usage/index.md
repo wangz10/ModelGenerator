@@ -1,6 +1,6 @@
 # Basic Usage
 
-ModelGenerator orchestrates experiments with [LightningCLI](https://lightning.ai/docs/pytorch/stable/cli/lightning_cli.html) to make runs modular, composable, and reproducible.
+AIDO.ModelGenerator orchestrates experiments with [LightningCLI](https://lightning.ai/docs/pytorch/stable/cli/lightning_cli.html) to make runs modular, composable, and reproducible.
 
 Training, validation, testing, and prediction are separated into independent CLI calls to `mgen fit/validate/test/predict`. 
 For researchers developing new backbones, heads, or tasks, a typical workflow might be 
@@ -116,7 +116,7 @@ We provide some useful tools in `configs/examples` for logging, development, LoR
 
 The full configuration including all defaults and user-specified arguments will always be saved for each run.
 This file changes location depending on logger, but will be in `logs/lightning_logs/your-experiment/config.yaml` by default, or if using wandb `logs/config.yaml`.
-Even if ModelGenerator defaults change, simply using `mgen fit --config your/logged/config.yaml` will always reproduce the experiment.
+Even if AIDO.ModelGenerator defaults change, simply using `mgen fit --config your/logged/config.yaml` will always reproduce the experiment.
 
 ### Example
 

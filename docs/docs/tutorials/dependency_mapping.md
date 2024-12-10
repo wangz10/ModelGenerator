@@ -1,7 +1,7 @@
 # Dependency Mapping
 
 Dependency mapping is an _in silico_ mutagenesis technique that identifies co-conserved elements in a sequence.
-ModelGenerator implements the procedure proposed by [Tomaz da Silva et al.](https://www.biorxiv.org/content/10.1101/2024.07.27.605418v1)
+AIDO.ModelGenerator implements the procedure proposed by [Tomaz da Silva et al.](https://www.biorxiv.org/content/10.1101/2024.07.27.605418v1)
 We use this to mine functional genomic elements in the [AIDO.DNA](https://doi.org/10.1101/2024.12.01.625444) paper with the [AIDO.DNA-7B](https://huggingface.co/genbio-ai/AIDO.DNA-7B) and [AIDO.DNA-300M](https://huggingface.co/genbio-ai/AIDO.DNA-300M) models.
 This task uses the pre-trained models directly, and does not require finetuning.
 

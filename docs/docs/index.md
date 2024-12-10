@@ -1,8 +1,8 @@
 # Introduction
 
-ModelGenerator is an opinionated plug-and-play research framework for cross-disciplinary teams in ML & Bio.
+AIDO.ModelGenerator is an opinionated plug-and-play research framework for cross-disciplinary teams in ML & Bio.
 
-ModelGenerator is designed to enable rapid and reproducible prototyping with four kinds of experiments in mind:
+AIDO.ModelGenerator is designed to enable rapid and reproducible prototyping with four kinds of experiments in mind:
 
 1. Applying pre-trained foundation models to new data
 2. Developing new finetuning and inference tasks for foundation models
@@ -11,9 +11,9 @@ ModelGenerator is designed to enable rapid and reproducible prototyping with fou
 
 while also scaling with hardware and integrating with larger data pipelines or research workflows.
 
-ModelGenerator is built on PyTorch, HuggingFace, and Lightning, and works seamlessly with these ecosystems.
+AIDO.ModelGenerator is built on PyTorch, HuggingFace, and Lightning, and works seamlessly with these ecosystems.
 
-## Who uses ModelGenerator?
+## Who uses AIDO.ModelGenerator?
 
 ### 🧬 Biologists 
 * Intuitive one-command CLIs for in silico experiments
@@ -38,7 +38,7 @@ ModelGenerator is built on PyTorch, HuggingFace, and Lightning, and works seamle
 * Community-driven development
 * Permissive license for academic and non-commercial use
 
-## Projects using ModelGenerator
+## Projects using AIDO.ModelGenerator
 
 - [Accurate and General DNA Representations Emerge from Genome Foundation Models at Scale](https://doi.org/10.1101/2024.12.01.625444)
 - [A Large-Scale Foundation Model for RNA Function and Structure Prediction](https://doi.org/10.1101/2024.11.28.625345)

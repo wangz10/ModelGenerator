@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "modelgenerator"
-version = "0.1.1"
-description = "ModelGenerator is an opinionated plug-and-play research framework for cross-disciplinary teams in ML & Bio"
+version = "0.1.0"
+description = "AIDO.ModelGenerator is an opinionated plug-and-play research framework for cross-disciplinary teams in ML & Bio"
 readme = "README.md"
 authors = [
     { name = "GenBio AI" },

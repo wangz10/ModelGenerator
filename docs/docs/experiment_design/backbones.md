@@ -7,10 +7,10 @@ Design decisions made during pre-training (tokenization, architecture, io format
 At best, this results in many reimplementations for benchmarking or finetuning tasks, and a high risk of buggy code.
 At worst, these decisions can lock in users and exclude certain tasks and use-cases.
 
-ModelGenerator eliminates the need for reimplementation and makes backbones task-agnostic: wrap your backbone in a standard interface, and reuse it across all inference and finetuning tasks.
+AIDO.ModelGenerator eliminates the need for reimplementation and makes backbones task-agnostic: wrap your backbone in a standard interface, and reuse it across all inference and finetuning tasks.
 It also makes compatibility transparent: if a backbone fits the required interface, it can be used for any data-appropriate task.
 
-> Note: Backbones for 1D sequence modeling are univerally supported. Other types of backbones included in ModelGenerator (e.g. structure, image) are not yet universally supported, but will be in the future.
+> Note: Backbones for 1D sequence modeling are univerally supported. Other types of backbones included in AIDO.ModelGenerator (e.g. structure, image) are not yet universally supported, but will be in the future.
 
 Available Backbones: 
 
