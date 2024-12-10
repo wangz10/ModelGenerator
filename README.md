@@ -1,4 +1,4 @@
-# ModelGenerator
+# [AIDO](https://github.com/genbio-ai/AIDO)/ModelGenerator
 
 ModelGenerator is an opinionated plug-and-play research framework for cross-disciplinary teams in ML & Bio.
 
@@ -14,6 +14,8 @@ while also scaling with hardware and integrating with larger data pipelines or r
 ModelGenerator is built on PyTorch, HuggingFace, and Lightning, and works seamlessly with these ecosystems.
 
 See the [ModelGenerator documentation](https://genbio-ai.github.io/ModelGenerator) for installation, usage, tutorials, and API reference.
+
+For more information on how ModelGenerator facilitates the development of an AI-driven Digital Organism, see [AIDO](https://github.com/genbio-ai/AIDO).
 
 ## Who uses ModelGenerator?
 
