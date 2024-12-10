@@ -13,6 +13,8 @@ while also scaling with hardware and integrating with larger data pipelines or r
 
 AIDO.ModelGenerator is built on PyTorch, HuggingFace, and Lightning, and works seamlessly with these ecosystems.
 
+To read about how AIDO.ModelGenerator facilitates the development of an AI-driven Digital Organism, see [AIDO](https://github.com/genbio-ai/AIDO).
+
 ## Who uses AIDO.ModelGenerator?
 
 ### 🧬 Biologists 

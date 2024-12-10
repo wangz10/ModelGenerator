@@ -17,8 +17,6 @@ See the [AIDO.ModelGenerator documentation](https://genbio-ai.github.io/ModelGen
 
 To read about how AIDO.ModelGenerator facilitates the development of an AI-driven Digital Organism, see [AIDO](https://github.com/genbio-ai/AIDO).
 
-For more information on how ModelGenerator facilitates the development of an AI-driven Digital Organism, see [AIDO](https://github.com/genbio-ai/AIDO).
-
 ## Who uses ModelGenerator?
 
 ### 🧬 Biologists 
