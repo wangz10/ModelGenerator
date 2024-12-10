@@ -46,23 +46,18 @@ ModelGenerator is built on PyTorch, HuggingFace, and Lightning, and works seamle
 - [Scaling Dense Representations for Single Cell with Transcriptome-Scale Context](https://doi.org/10.1101/2024.11.28.625303)
 - [Balancing Locality and Reconstruction in Protein Structure Tokenizer](https://doi.org/10.1101/2024.12.02.626366)
 
-# Quick Start
-
 ## Installation
+```
+git clone https://github.com/genbio-ai/ModelGenerator.git
+cd ModelGenerator
+pip install -e .
+```
+Source installation is necessary to add new backbones, finetuning tasks, and data transformations, as well as use convenience configs and scripts. If you only need to run inference, reproduce published experiments, or finetune on new data, you can use
 ```
 pip install modelgenerator
 pip install git+https://github.com/genbio-ai/openfold.git@c4aa2fd0d920c06d3fd80b177284a22573528442
 pip install git+https://github.com/NVIDIA/dllogger.git@0540a43971f4a8a16693a9de9de73c1072020769
 ```
-Good for running inference, reproducing published experiments, or finetuning on new data
-
-## Developer Installation
-```
-git clone https://github.com/genbio-ai/ModelGenerator
-cd modelgenerator
-pip install -e .
-```
-Necessary to add new backbones, finetuning tasks, or data transformations
 
 ## Quick Start
 ### Get embeddings from a pre-trained model
@@ -81,7 +76,7 @@ mgen predict --model Inference --model.backbone aido_dna_dummy \
   --config configs/examples/save_predictions.yaml
 ```
 
-### Finetune a pre-trained model
+### Finetune a model
 ```
 mgen fit --model ConditionalDiffusion --model.backbone aido_dna_dummy \
   --data ConditionalDiffusionDataModule --data.path "genbio-ai/100m-random-promoters"
@@ -103,7 +98,7 @@ mgen predict --model ConditionalDiffusion --model.backbone aido_dna_dummy \
 ```
 
 ## Configify your experiment
-The command
+This command
 ```
 mgen fit --model ConditionalDiffusion --model.backbone aido_dna_dummy \
   --data ConditionalDiffusionDataModule --data.path "genbio-ai/100m-random-promoters"
@@ -132,8 +127,9 @@ mgen fit --model SequenceRegression --data PromoterExpressionRegression \
   --config configs/examples/wandb.yaml
 ```
 
+We provide some useful examples in `configs/examples`.
 Configs use the LAST value for each attribute.
-Check the full configuration in `logs/lightning_logs/your-experiment/config.yaml`, or if using wandb `logs/config.yaml`.
+Check the full configuration logged with each experiment in `logs/lightning_logs/your-experiment/config.yaml`, or if using wandb `logs/config.yaml`.
 
 ## Use LoRA for parameter-efficient finetuning
 This also avoids saving the full model, only the LoRA weights are saved.
@@ -163,8 +159,8 @@ mgen fit --model SequenceClassification --model.strict_loading false \
 ```
 Make sure to turn off `strict_loading` to replace the adapter!
 
-## Use the head/adapter that comes with the backbone
+## Use the head/adapter/decoder that comes with the backbone
 ```
 mgen fit --model SequenceClassification --data GUEClassification \
---model.use_legacy_adapter true
+  --model.use_legacy_adapter true
 ```

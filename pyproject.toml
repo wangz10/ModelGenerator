@@ -55,7 +55,6 @@ requires-python = ">=3.10,<3.11"
 
 [project.scripts]
 mgen = "modelgenerator.main:cli_main"
-gbdata = "modelgenerator.cloud_utils:cloud_cli_main"
 mgen-hf = "modelgenerator.huggingface_models.utils:hf_cli_main"
 
 [tool.hatch.build.targets.wheel]
@@ -65,5 +64,5 @@ package = ["modelgenerator"]
 allow-direct-references = true
 
 [project.urls]
-"Homepage" = "https://github.com/genbio-ai/ModelGenerator"
+"Homepage" = "https://genbio-ai.github.io/ModelGenerator"
 "Source" = "https://github.com/genbio-ai/ModelGenerator"

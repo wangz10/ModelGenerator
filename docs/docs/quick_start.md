@@ -2,12 +2,11 @@
 
 ## Installation
 ```
-git clone git@gitlab.genbio.ai:development/modelgenerator/ModelGenerator.git
+git clone https://github.com/genbio-ai/ModelGenerator.git
 cd ModelGenerator
 pip install -e .
 ```
-Source installation is necessary to add new backbones, finetuning tasks, and data transformations, as well as use convenience configs and scripts.
-If you only need to run inference, reproduce published experiments, or finetune on new data, you can use
+Source installation is necessary to add new backbones, finetuning tasks, and data transformations, as well as use convenience configs and scripts. If you only need to run inference, reproduce published experiments, or finetune on new data, you can use
 ```
 pip install modelgenerator
 pip install git+https://github.com/genbio-ai/openfold.git@c4aa2fd0d920c06d3fd80b177284a22573528442
