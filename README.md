@@ -51,8 +51,6 @@ ModelGenerator is built on PyTorch, HuggingFace, and Lightning, and works seamle
 ## Installation
 ```
 pip install modelgenerator
-
-# To use AIDO.StructureTokenizer, also install openfold and dllogger
 pip install git+https://github.com/genbio-ai/openfold.git@c4aa2fd0d920c06d3fd80b177284a22573528442
 pip install git+https://github.com/NVIDIA/dllogger.git@0540a43971f4a8a16693a9de9de73c1072020769
 ```
