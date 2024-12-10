@@ -1,4 +1,4 @@
-# [AIDO](https://github.com/genbio-ai/AIDO)/ModelGenerator
+# [AIDO](https://github.com/genbio-ai/AIDO).ModelGenerator
 
 ModelGenerator is an opinionated plug-and-play research framework for cross-disciplinary teams in ML & Bio.
 
