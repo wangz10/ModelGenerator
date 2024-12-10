@@ -1,8 +1,10 @@
 # Introduction
 
-AIDO.ModelGenerator is an opinionated plug-and-play research framework for cross-disciplinary teams in ML & Bio.
+AIDO.ModelGenerator is a software stack for adapting pretrained models and generating downstream task models in an AI-driven Digitial Organism (AIDO). 
+To read more about AIDO.ModelGenerator's integral role in building the world's first AI-driven Digital Organism, see [AIDO](https://github.com/genbio-ai/AIDO).
 
-AIDO.ModelGenerator is designed to enable rapid and reproducible prototyping with four kinds of experiments in mind:
+AIDO.ModelGenerator is open-sourced as an opinionated plug-and-play research framework for cross-disciplinary teams in ML & Bio. 
+It is designed to enable rapid and reproducible prototyping with four kinds of experiments in mind:
 
 1. Applying pre-trained foundation models to new data
 2. Developing new finetuning and inference tasks for foundation models
@@ -12,8 +14,6 @@ AIDO.ModelGenerator is designed to enable rapid and reproducible prototyping wit
 while also scaling with hardware and integrating with larger data pipelines or research workflows.
 
 AIDO.ModelGenerator is built on PyTorch, HuggingFace, and Lightning, and works seamlessly with these ecosystems.
-
-To read about how AIDO.ModelGenerator facilitates the development of an AI-driven Digital Organism, see [AIDO](https://github.com/genbio-ai/AIDO).
 
 ## Who uses AIDO.ModelGenerator?
 
