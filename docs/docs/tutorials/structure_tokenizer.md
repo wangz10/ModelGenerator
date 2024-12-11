@@ -32,7 +32,7 @@ Key Features:
 - **Decoding**: Reconstructs protein structures from tokens.
 - **Combined Encoding & Decoding**: Supports running both processes in a single pipeline.
 
-![Structure Tokenizer](../../docs/docs/assets/images/structure_tokenizer/structure_tokenizer.png)
+![Structure Tokenizer](../assets/images/structure_tokenizer/structure_tokenizer.png)
 
 Relevant configuration files:
 - `encode.yaml` for encoding tasks.
@@ -52,7 +52,7 @@ Workflow:
 1. Input amino acid sequences.
 2. Predict structure tokens using the language model.
 3. Decode the predicted tokens into protein structures using the Structure Tokenizer.
-![Structure Prediction Model](../../docs/docs/assets/images/structure_tokenizer/structure_prediction_model.png)
+![Structure Prediction Model](../assets/images/structure_tokenizer/structure_prediction_model.png)
 
 Relevant configuration files:
 - `protein2structoken_16b.yaml` for predicting structure tokens from amino acid sequences.
@@ -94,7 +94,7 @@ huggingface-cli download genbio-ai/sample-structure-dataset --repo-type dataset 
 
 This dataset is based on the CASP15 dataset, which can be referenced at:
 - [CASP15 Prediction Center](https://predictioncenter.org/casp15/)
-- [CASP15 GitHub Repository](https://github.com/Bhattacharya-Lab/CASP15)
+- [Bhattacharya-Lab/CASP15](https://github.com/Bhattacharya-Lab/CASP15)
 
 The downloaded directory includes:
 - A `registries` folder containing a CSV file with metadata such as filenames and PDB IDs.
@@ -261,9 +261,9 @@ CUDA_VISIBLE_DEVICES=0 mgen predict --config experiments/AIDO.StructuctureTokeni
 We use VS Code + [Protein Viewer Extension](https://marketplace.visualstudio.com/items?itemName=ArianJamasb.protein-viewer) to visualize the protein structures. It's a beginner-friendly tool for VS Code users. You could also use your preferred protein structure viewer to visualize the structures (e.g., PyMOL, ChimeraX, etc.), but here we focus on this extension.
 
 If you have run the [Combined Encoding and Decoding Task](#combining-encode-and-decode), you could find the decoded structures and their corresponding original structures in the output directory. You could visualize them as follows.
-- Find the desired `output.pdb` and `input.pdb` pair in the side panel. Select both files when holding the `Ctrl` key (for Mac users, hold the `Cmd` key). ![Select Files](../../docs/docs/assets/images/structure_tokenizer//select_files.png)
-- Right-click on the selected files and choose "Launch Protein Viewer". ![Launch Protein Viewer from File(s)](../../docs/docs/assets/images/structure_tokenizer//launch_protein_viewer.png)
-- A new tab will open with the protein structures displayed. You can interact with the structures using the Protein Viewer extension. Wwe have aligned the reconstructed structures to the original structures using the Kabsch algorithm, the displayed structures should be like this, where different colors mean different files. ![Visualize Reconstruction](../../docs/docs/assets/images/structure_tokenizer//visualize_reconstruction.png)
+- Find the desired `output.pdb` and `input.pdb` pair in the side panel. Select both files when holding the `Ctrl` key (for Mac users, hold the `Cmd` key). ![Select Files](../assets/images/structure_tokenizer//select_files.png)
+- Right-click on the selected files and choose "Launch Protein Viewer". ![Launch Protein Viewer from File(s)](../assets/images/structure_tokenizer//launch_protein_viewer.png)
+- A new tab will open with the protein structures displayed. You can interact with the structures using the Protein Viewer extension. Wwe have aligned the reconstructed structures to the original structures using the Kabsch algorithm, the displayed structures should be like this, where different colors mean different files. ![Visualize Reconstruction](../assets/images/structure_tokenizer//visualize_reconstruction.png)
 
 ### Structure Prediction
 
@@ -319,7 +319,7 @@ CUDA_VISIBLE_DEVICES=0 mgen predict --config experiments/AIDO.StructureTokenizer
 ```
 
 Here is an example visualization of `logs/protstruct_decode/protein2structoken_16b_pdb_files/cameo:0__output.pdb`.
-![CAMEO:0](../../docs/docs/assets/images/structure_tokenizer//cameo_0.png)
+![CAMEO:0](../assets/images/structure_tokenizer//cameo_0.png)
 
 **Notes:**
 - While the language model part (amino acid sequence to structure tokens) is relatively fast and support multi-GPU, the decoding part (structure tokens to protein structures) is slower and currently only supports single GPU inference due to the file saving mechanism. We plan to support multi-GPU inference in the future.

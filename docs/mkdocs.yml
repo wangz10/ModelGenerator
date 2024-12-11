@@ -16,9 +16,10 @@ nav:
     - usage/exporting_models.md
     - usage/reproducing_experiments.md
   - Tutorials:
-    - tutorials/uncertainty.md
+    - tutorials/kfold_cross_validation.md
     - tutorials/dependency_mapping.md
     - tutorials/zeroshot.md
+    - tutorials/structure_tokenizer.md
   - Experiment Design:
     - experiment_design/index.md
     - experiment_design/backbones.md

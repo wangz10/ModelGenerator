@@ -542,6 +542,24 @@ class TokenClassificationDataModule(DataInterface, HFDatasetLoaderMixin):
 
 
 class StructureTokenDataModule(DataInterface, HFDatasetLoaderMixin):
+    """Test only data module for structure token predictors.
+
+    This data module is specifically designed for handling datasets uses amino acid sequences as input
+    and structure tokens as labels.
+
+    Note:
+        This module only supports testing and ignores training and validation splits.
+        It assumes test split files contain sequences and optionally their structural token labels.
+        If structural token labels are not provided, dummy labels are created.
+
+    Args:
+        path (str): The path to the dataset files.
+        config_name (Optional[str], optional): Configuration name for dataset loading. Defaults to None.
+        test_split_files (Optional[List[str]], optional): List of files for the test split. Defaults to None.
+        batch_size (int, optional): The batch size for data loading. Defaults to 1.
+        **kwargs: Additional keyword arguments passed to the parent class, in which training and validation split
+            settings are overridden so that only the test split is loaded.
+    """
     def __init__(
         self,
         path: str,

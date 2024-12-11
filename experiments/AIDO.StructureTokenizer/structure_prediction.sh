@@ -30,7 +30,7 @@ python experiments/AIDO.StructureTokenizer/extract_structure_tokenizer_codebook.
 # 4. run the decode model to convert the structure tokens into pdb files
 # currently this script doesn't support multi-gpu, so only use one gpu
 # the command line overrides the name, input structure tokens, and codebook path
-# the output is logs/protein2structoken_16b/predict_predictions.pdb
+# the output is logs/protstruct_decode/protein2structoken_16b_pdb_files/*output.pdb
 CUDA_VISIBLE_DEVICES=0 mgen predict --config experiments/AIDO.StructureTokenizer/decode.yaml \
  --data.init_args.config.struct_tokens_datasets_configs.name=protein2structoken_16b \
  --data.init_args.config.struct_tokens_datasets_configs.struct_tokens_path=logs/protein2structoken_16b/predict_predictions.pt \
