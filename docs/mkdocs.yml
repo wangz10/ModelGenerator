@@ -1,7 +1,7 @@
 site_name: AIDO.ModelGenerator
 site_url: https://genbio-ai.github.io/ModelGenerator/
 site_author: GenBio AI
-site_description: AIDO.ModelGenerator is a software stack for adapting pretrained models and generating downstream task models in an AI-driven Digitial Organism (AIDO).
+site_description: AIDO.ModelGenerator is a software stack for adapting pretrained models and generating finetuned models for downstream tasks in an AI-driven Digital Organism (AIDO).
 copyright: All rights reserved &copy; 2024-Present, GenBio AI
 
 repo_name: AIDO.ModelGenerator
