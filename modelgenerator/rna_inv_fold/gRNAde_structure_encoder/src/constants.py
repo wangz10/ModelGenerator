@@ -8,7 +8,7 @@ DATA_PATH = os.path.join(
     os.environ.get("MGEN_DATA_DIR"), "modelgenerator/datasets/rna_inv_fold/"
 )
 if DATA_PATH is None:
-    DATA_PATH = "/mgen_data/modelgenerator/datasets/rna_inv_fold/"
+    raise Exception("DATA_PATH not set properly. Did you set the environment variable 'MGEN_DATA_DIR'?")
 
 raw_data_dir = os.path.join(DATA_PATH, "raw_data")
 if not os.path.exists(raw_data_dir):
@@ -17,6 +17,12 @@ if not os.path.exists(raw_data_dir):
     )
 
 os.makedirs(os.path.join(DATA_PATH, "structure_encoding"), exist_ok=True)
+
+MODEL_PATH = os.environ.get("gRNAde_CKPT_PATH")
+if not os.path.exists(MODEL_PATH):
+    raise FileNotFoundError(
+        f"The gRNAde checkpoint file '{MODEL_PATH}' does not exist."
+    )
 
 SPITS_TO_CONSIDER = os.environ.get("SPITS_TO_CONSIDER")
 if SPITS_TO_CONSIDER is None:

@@ -25,7 +25,7 @@ from src.models_encoder_only import (
     NonAutoregressiveMultiGNNv1,
 )
 
-from src.constants import DATA_PATH, SPITS_TO_CONSIDER
+from src.constants import DATA_PATH, MODEL_PATH, SPITS_TO_CONSIDER
 
 
 def main(config, device):
@@ -44,8 +44,7 @@ def main(config, device):
     wandb.run.summary["total_param"] = total_param
 
     # Load checkpoint
-    if config.model_path != "":
-        model.load_state_dict(torch.load(config.model_path, map_location=device))
+    model.load_state_dict(torch.load(MODEL_PATH, map_location=device))
 
     if config.evaluate:
         # # Get train, val, test data samples as lists

@@ -17,9 +17,13 @@ nav:
     - usage/reproducing_experiments.md
   - Tutorials:
     - tutorials/kfold_cross_validation.md
+    - tutorials/finetuning_scheduler.md
     - tutorials/dependency_mapping.md
     - tutorials/zeroshot.md
     - tutorials/structure_tokenizer.md
+    - tutorials/protein_inverse_folding.md
+    - tutorials/rna_inverse_folding.md
+    - tutorials/rna_secondary_structure_prediction.md
   - Experiment Design:
     - experiment_design/index.md
     - experiment_design/backbones.md

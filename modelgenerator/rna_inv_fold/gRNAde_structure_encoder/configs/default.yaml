@@ -94,7 +94,7 @@ val_every:
 
 # Evaluation configurations
 model_path:
-  value: '/mgen_data/modelgenerator/datasets/gRNAde/geometric-rna-design/checkpoints/gRNAde_ARv1_1state_das.h5'
+  value: ''
   desc: Path to model checkpoint for evaluation or reloading
 evaluate:
   value: True

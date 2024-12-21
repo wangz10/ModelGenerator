@@ -452,7 +452,7 @@ class ProteinInvFold(TaskInterface):
             print("Weighted avg acc:", _acc)
 
             if self.trainer.testing or log_prefix == "test":
-                open(f"proteinIF_outputs/results_acc_{_acc}.notfasta", "w").write(
+                open(f"proteinIF_outputs/results_acc_{_acc}.txt", "w").write(
                     writer_str
                 )
 
