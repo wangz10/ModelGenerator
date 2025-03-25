@@ -1578,7 +1578,7 @@ class Embed(TaskInterface):
     def configure_model(self) -> None:
         if self.backbone is not None:
             return
-        self.backbone = self.backbone_fn(LegacyAdapterType.MASKED_LM, None)
+        self.backbone = self.backbone_fn(None, None)
 
     def transform(
         self, batch: dict[str, Union[list, Tensor]], batch_idx: Optional[int] = None
