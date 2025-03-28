@@ -8,6 +8,7 @@ from typing import Literal
 
 import torch
 from biotite.structure.io import pdbx, pdb
+from biotite.structure.io.pdbx import convert
 import biotite.structure as bs
 import numpy as np
 
@@ -246,16 +247,17 @@ class Protein:
             resolution = get_resolution(cif_file=cif_file)
         except Exception as e:
             resolution = 0.0
-        atom_array = pdbx.get_structure(
-            cif_file,
-            model=1,
-            extra_fields=["b_factor", "label_seq_id", "label_entity_id"],
-        )
+        atom_array = convert.get_structure(cif_file, model=1, 
+                            extra_fields=["b_factor"])
+        if chain_id == "detect":
+            chain_id = atom_array.chain_id[0]
+        if not (atom_array.chain_id == chain_id).any():
+            atom_array = convert.get_structure(cif_file, model=1, 
+                                extra_fields=["b_factor"], use_author_fields=False)
         atom_array = atom_array[
             bs.filter_amino_acids(atom_array)
             & ~atom_array.hetero
             & (atom_array.chain_id == chain_id)
-            & (atom_array.label_entity_id == str(entity_id))
         ]
 
         if atom_array.array_length() == 0:
