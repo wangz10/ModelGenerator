@@ -195,7 +195,7 @@ class Protein:
     @classmethod
     def from_pdb_file(cls, pdb_file: pdb.PDBFile, id: str, chain_id: str) -> "Protein":
         atom_array = pdb.get_structure(pdb_file, model=1, extra_fields=["b_factor"])
-        if chain_id == "nan":
+        if chain_id in ("nan", "detect", " "):
             atom_array = atom_array[
                 bs.filter_amino_acids(atom_array) & ~atom_array.hetero
             ]
